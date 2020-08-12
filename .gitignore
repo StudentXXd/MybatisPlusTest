@@ -31,3 +31,6 @@ build/
 .vscode/
 /.idea/
 /target/
+/mvnw
+/mvnw.cmd
+.mvn/

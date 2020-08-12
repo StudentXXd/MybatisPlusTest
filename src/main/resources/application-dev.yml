@@ -1,7 +1,7 @@
 
 # 配置端口
 server:
-  port: 8080
+  port: 8000
   jetty:
     acceptors: 500
   tomcat:
@@ -43,13 +43,13 @@ config:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/first_mysql?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull
       username: root
-      password: root
+      password: 123456
       type: com.alibaba.druid.pool.DruidDataSource
     db2:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/second_mysql?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&zeroDateTimeBehavior=convertToNull
       username: root
-      password: root
+      password: 123456
       type: com.alibaba.druid.pool.DruidDataSource
 
 spring:
@@ -70,3 +70,13 @@ spring:
         min-idle: 0
     # 连接超时时间（毫秒）
     timeout: 1000
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    #消息确认配置项
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirms: true
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
